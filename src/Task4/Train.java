@@ -57,6 +57,24 @@ public class Train {
          }
      }
 
+    /*public static void sortNumberOfTrain1(Train[] list) { //метод сортирует не до конца!!!
+    int[] array = new int[list.length];
+        for (int i = 0; i < list.length; i++) {
+        Train d = list[i];
+        array[i] = d.numberOfTrain;
+    }
+        for (int i = 0; i < list.length; i++) {
+            Train d = list[i];
+            Arrays.sort(array);
+            d.numberOfTrain = array[i];
+            for (Train information : list) {
+                if (information.numberOfTrain == array[i]) {
+                    System.out.println("Train №" + information.numberOfTrain + ": " + information.nameStation + " - " + information.departureTime);
+                }
+            }
+        }
+    }*/
+
     private static void findInformationAboutTrain(Train[] list) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number of train: ");
@@ -117,10 +135,10 @@ public class Train {
 
         sortNumberOfTrain(list);
 
+        /*sortNumberOfTrain1(list);*/
+
         System.out.println();
 
         sortNameStation(list);
-
     }
 }
-
